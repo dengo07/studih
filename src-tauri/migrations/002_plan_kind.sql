@@ -1,0 +1,1 @@
+ALTER TABLE plan_items ADD COLUMN kind TEXT NOT NULL DEFAULT 'learn';
