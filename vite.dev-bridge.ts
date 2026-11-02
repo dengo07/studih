@@ -8,7 +8,7 @@ import type { Plugin } from "vite";
  * Dev-server-only stand-in for the Tauri backend, so the UI can run in a normal browser.
  * Forwards to `studih-ai`, a tiny binary built from the same Rust crate the app uses.
  */
-const BIN = path.resolve(__dirname, "src-tauri/target/debug/studih-ai");
+const BIN = path.resolve(import.meta.dirname, "src-tauri/target/debug/studih-ai");
 
 const COMMANDS: Record<string, { sub: string; stdin?: (args: Record<string, unknown>) => string }> = {
   openrouter_key_status: { sub: "key-status" },
